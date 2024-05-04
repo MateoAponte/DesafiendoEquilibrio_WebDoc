@@ -1,4 +1,25 @@
+import CanchaBasket from '../assets/img/backgrounds/Cancha_Basket.png';
+import CanchaUltimate from '../assets/img/backgrounds/Cancha_Ultimate.png';
+import CanchaAtl from '../assets/img/backgrounds/Pista_Atl.png';
+
+const Backgrounds = [CanchaBasket, CanchaUltimate, CanchaAtl];
+
 export const useRevealMask = () => {
+  let backgroundPos = 0;
+  const backgroundSetter = () => {
+    const revealImg = document.querySelector('.home__mask');
+    if (backgroundPos < Backgrounds.length - 1) {
+      revealImg.style.backgroundImage = `url(${Backgrounds[backgroundPos]}`;
+      backgroundPos += 1;
+    } else {
+      backgroundPos = 0;
+    }
+  };
+  const timerBackground = () => {
+    setInterval(() => {
+      backgroundSetter();
+    }, 15000);
+  };
   const onMouseMove = () => {
     const container = document.querySelector('.home');
     const revealImg = document.querySelector('.home__mask');
@@ -52,5 +73,6 @@ export const useRevealMask = () => {
   };
   return {
     onMouseMove,
+    timerBackground,
   };
 };

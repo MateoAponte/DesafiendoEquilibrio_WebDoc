@@ -3,12 +3,12 @@ export const useDetectOrientation = () => {
     const orientationSetter = () => {
       const element = document.querySelector(el);
       if (window.innerWidth < window.innerHeight) {
-        console.log(el);
         element.style.display = 'flex';
       } else {
         element.style.display = 'none';
       }
     };
+    window.addEventListener('load', orientationSetter);
     window.addEventListener('orientationchange', orientationSetter);
     window.addEventListener('resize', orientationSetter);
   };

@@ -4,10 +4,14 @@ import SelectedPicture from '../components/Home/SelectedPicture';
 import { useEffect, useState } from 'react';
 import { useRevealMask } from '../hooks/useRevealMask';
 
+import Maximize from '../assets/img/maximize-icon.png';
+import Headphones from '../assets/img/headphones-icon.png';
+import Smart from '../assets/img/girar-smartphone_icon.png';
+
 const Home = () => {
   const [selected, setSelected] = useState({});
   const [showOverlay, setShowOverlay] = useState(false);
-  const { onMouseMove } = useRevealMask();
+  const { onMouseMove, timerBackground } = useRevealMask();
   useEffect(() => {
     document.addEventListener('click', (evt) => {
       if (evt.target.className.indexOf('home__gallery-overlay') !== -1) {
@@ -20,6 +24,7 @@ const Home = () => {
       }
     });
     onMouseMove();
+    timerBackground();
   }, []);
 
   const getOverlayStatus = (className) => {
@@ -28,9 +33,22 @@ const Home = () => {
 
   return (
     <main className="home">
+      <section className="home__main-screen">
+        <div className="home__title-container">
+          <h1 className="title-text">DESAFIANDO EL EQUILIBRIO</h1>
+          <h1 className="title-shadow">DESAFIANDO EL EQUILIBRIO</h1>
+        </div>
+        <div className="background-screen"></div>
+        <div className="home-recommendation">
+          <span className="home-recommendation-icon">
+            <img src={Maximize} alt="Maximize screen icon" />
+            <img src={Headphones} alt="Use headphones to interactive experience" />
+            <img src={Smart} alt="Change to landscape view" />
+          </span>
+          <span className="home-recommendation-text">Se recomienda usar la página de esa forma para mejorar la experiencia</span>
+        </div>
+      </section>
       <section className="home__title">
-        <h1 className="title-text">DESAFIANDO EL EQUILIBRIO</h1>
-        <h1 className="title-shadow">DESAFIANDO EL EQUILIBRIO</h1>
         <section className="home__description">
           <span>Conoce las historias de vida detrás de estos deportistas universitarios </span>
         </section>
