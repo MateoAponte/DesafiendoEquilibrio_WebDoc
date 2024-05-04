@@ -1,0 +1,135 @@
+@mixin getFontFamily($ff) {
+  font-family: $ff, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: 'Grotesk Grand';
+  src: url('../fonts/grotesk_grand/kobuzan-cy-grotesk-grand-dark.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Bauhaus Tribute';
+  src: url('../fonts/bauhaus_tributte/BAUHAUSHOMENAJE.ttf') format('truetype');
+}
+
+/* Nervermind */
+@font-face {
+  font-family: 'Nevermind B';
+  src: url('../fonts/nevermind_bauhaus/NeverMindBauhaus-Light-BF6501284a7896b.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Nevermind B';
+  src: url('../fonts/nevermind_bauhaus/NeverMindBauhaus-Regular-BF6501284a7fde0.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Nevermind B';
+  src: url('../fonts/nevermind_bauhaus/NeverMindBauhaus-Medium-BF6501284a00903.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Nevermind B';
+  src: url('../fonts/nevermind_bauhaus/NeverMindBauhaus-Bold-BF6501284a8ae7b.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* Grotesk Urban */
+@font-face {
+  font-family: 'Grotesk Urban';
+  src: url('../fonts/grotesk-urban/UrbanGroteskTRIAL-Light-BF657281a9d9efa.otf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Grotesk Urban';
+  src: url('../fonts/grotesk-urban/UrbanGroteskTRIAL-Regular-BF657281a9ca800.otf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Grotesk Urban';
+  src: url('../fonts/grotesk-urban/UrbanGroteskTRIAL-Medium-BF657281a9cb20c.otf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Grotesk Urban';
+  src: url('../fonts/grotesk-urban/UrbanGroteskTRIAL-Bold-BF657281a9a0d99.otf') format('truetype');
+  font-weight: 700;
+}
+
+/* Mitga Font */
+@font-face {
+  font-family: 'Mitga Font';
+  src: url('../fonts/mirga-font/BwMitgaDEMO-Light-BF65d56dfb3faa2.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Mitga Font';
+  src: url('../fonts/mirga-font/BwMitgaDEMO-Regular-BF65d56dfaeca3e.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Mitga Font';
+  src: url('../fonts/mirga-font/BwMitgaDEMO-Medium-BF65d56dfb5779b.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Mitga Font';
+  src: url('../fonts/mirga-font/BwMitgaDEMO-Bold-BF65d56dfb00060.otf') format('opentype');
+  font-weight: 700;
+}
+
+/* Moderustic Font */
+@font-face {
+  font-family: 'Moderustic';
+  src: url('../fonts/moderustic-font/Moderustic-Regular-BF660f6f561376f.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Moderustic';
+  src: url('../fonts/moderustic-font/Moderustic-Medium-BF660f6f56521a7.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Moderustic';
+  src: url('../fonts/moderustic-font/Moderustic-SemiBold-BF660f6f558445c.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Moderustic';
+  src: url('../fonts/moderustic-font/Moderustic-Bold-BF660f6f54bab80.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Akhand';
+  src: url('../fonts/akhand-font/AkhandSoft-Light-BF660630aa68889.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Akhand';
+  src: url('../fonts/akhand-font/AkhandSoft-Regular-BF660630aaa8fd3.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Akhand';
+  src: url('../fonts/akhand-font/AkhandSoft-Semibold-BF660630aa5c3e3.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Akhand';
+  src: url('../fonts/akhand-font/AkhandSoft-Bold-BF660630aaecb5f.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Handwritting';
+  src: url('../fonts/handwritting/Amsterdam-BF65d4b74081058.otf') format('opentype');
+}
+
+$font-family-1: 'Grotesk Grand';
+$font-family-2: 'Bauhaus T';
+$font-family-3: 'Nevermind B';
+$font-family-4: 'Grotesk Urban';
+$font-family-5: 'Mitga Font';
+$font-family-6: 'Moderustic';
+$font-family-7: 'Akhand';
+$font-family-quote: 'Handwritting';

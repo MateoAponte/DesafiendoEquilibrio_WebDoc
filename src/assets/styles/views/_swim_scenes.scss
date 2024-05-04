@@ -1,0 +1,308 @@
+.scene__image--swim {
+  // Scene 1
+  &.scene__intro-swim {
+    height: 650vh;
+    position: relative;
+    .background {
+      width: 150vw !important;
+      height: 130vh !important;
+      top: -30vh;
+    }
+    .title {
+      @include titleScene(65vw, 0vh, 'Episodio 3');
+    }
+    .athlete-1 {
+      top: 20vh;
+      left: 10vw;
+      z-index: 5;
+    }
+    .athlete-2 {
+      width: 18vw;
+      top: 20vh;
+      left: 33vw;
+      transform: rotate(-10deg);
+    }
+    .athlete-3 {
+      width: 18vw;
+      top: 1vh;
+      left: 47vw;
+    }
+    .note {
+      display: none;
+    }
+  }
+  &.scene__second-swim {
+    height: 1100vh;
+    position: relative;
+    top: -400vh;
+    left: 174vw;
+    .trigger-second-scene {
+      @include trigger(blue, -10vh);
+    }
+    .transition {
+      left: -84vw;
+      z-index: 10;
+      border-right: 3px solid #fff;
+    }
+    .background {
+      width: 150vw;
+      height: 130vh;
+    }
+    .team {
+      z-index: 15;
+      width: 100vw;
+      top: -35vh;
+    }
+    .trigger-background {
+      @include trigger(blue, 150vh);
+    }
+    .trigger-video {
+      @include trigger(blue, 500vh);
+    }
+    .video_scene {
+      height: 100vh;
+      width: 28vw;
+      border-left: 3px solid #fff;
+      border-right: 3px solid #fff;
+      left: 100vw;
+      z-index: 20;
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text {
+      z-index: 15;
+      color: #19191a;
+      font-family: $font-family-quote;
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      width: 100% !important;
+      text-align: center;
+      left: 0vw;
+      top: 84vh;
+    }
+  }
+  &.scene__third-swim {
+    top: -300vh;
+    position: relative;
+    height: 900vh;
+    .scene__image-container {
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+    }
+    .beach {
+      width: 100vw;
+      top: 10vh;
+      height: 120vh;
+      z-index: 10;
+      border-bottom: 3px solid #fff;
+    }
+    .sky {
+      top: -30vh;
+      height: 140vh;
+      width: 170vw;
+      z-index: 5;
+      border-top: 3px solid #fff;
+    }
+    .trigger-third-scene {
+      @include trigger(rgb(255, 94, 0), 50vh);
+    }
+    .scene__image-container {
+      perspective: 1000px;
+    }
+    .text {
+      z-index: 10;
+      color: #fff;
+      font-family: $font-family-quote;
+      font-size: 3rem;
+      margin-bottom: 8px;
+      width: 100% !important;
+      text-align: center;
+      text-shadow: 0px 1px 5px #000;
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateX(-30deg);
+      z-index: 5;
+      scale: 0.8;
+    }
+    .text-1 {
+      top: 40vh;
+    }
+    .text-2 {
+      top: 148vh;
+    }
+    .photo {
+      width: 20vw;
+      height: 35vh;
+      scale: 0.8;
+
+      z-index: 5;
+      opacity: 0.8;
+      transition: scale linear 0.6s;
+      &:hover {
+        scale: 1.1 !important;
+      }
+    }
+    .photo-1 {
+      top: 55vh;
+      left: 41vw;
+      transform: perspective(1000px) rotateX(-15deg);
+    }
+    .photo-2 {
+      top: 55vh;
+      left: 18vw;
+      transform: perspective(1000px) rotateX(-15deg) skewX(9deg);
+    }
+    .photo-3 {
+      top: 55vh;
+      left: 64vw;
+      transform: perspective(1000px) rotateX(-15deg) skewX(-7deg);
+    }
+    .visor {
+      width: 100vw;
+      height: 45vh;
+      border-top: 3px solid #fff;
+      border-bottom: 3px solid #fff;
+      overflow: hidden;
+      top: 100vh;
+      z-index: 10;
+      position: relative;
+      .pool {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150vw;
+        height: 150vh;
+      }
+      .camara {
+        width: 25vw;
+        height: 35vh;
+        .camara__frame {
+          position: absolute;
+          width: 110%;
+          height: 110%;
+          z-index: 20;
+          left: -5%;
+          top: -5%;
+        }
+        .camara__image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 15;
+        }
+      }
+      .camara-1 {
+        position: absolute;
+        top: -60vh;
+        left: 35vw;
+        rotate: 15deg;
+      }
+      .camara-2 {
+        position: absolute;
+        top: -35vh;
+        left: 65vw;
+        rotate: -25deg;
+      }
+      .camara-3 {
+        position: absolute;
+        top: -35vh;
+        left: 10vw;
+        rotate: 35deg;
+      }
+      .camara-4 {
+        position: absolute;
+        top: -10vh;
+        left: 35vw;
+        rotate: -25deg;
+      }
+    }
+    .trigger-third-pool {
+      @include trigger(rgb(33, 104, 33), 450vh);
+    }
+  }
+  &.scene__four-swim {
+    position: relative;
+    height: 500vh;
+    top: -200vh;
+    .background {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 10;
+    }
+    .winner-1 {
+      width: 30vw;
+      height: 59vh;
+      left: 0vw;
+      top: 38vh;
+      z-index: 15;
+      position: absolute;
+    }
+    .winner-2 {
+      width: 26vw;
+      height: 48vh;
+      left: 76vw;
+      top: 32vh;
+      scale: 0.8;
+      z-index: 15;
+      position: absolute;
+    }
+    .winner-3 {
+      width: 35vw;
+      height: 45vh;
+      left: 35vw;
+      top: 53.5vh;
+      z-index: 15;
+      position: absolute;
+    }
+    .video_scene {
+      z-index: 5;
+      left: 40vw;
+      width: 28vw;
+      height: 32vh;
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .paper {
+      width: 32vw;
+      height: 20vh;
+      transform: rotate(-15deg);
+      left: 35vw;
+      top: 45vh;
+      z-index: 10;
+      opacity: 0;
+      scale: 0.8;
+      &__image {
+        width: 100%;
+        height: 100%;
+      }
+      &__text {
+        color: $color-black-notation;
+        font-family: $font-family-quote;
+        font-weight: 600;
+        width: 100%;
+        font-size: 1.5rem;
+        position: absolute;
+        z-index: 12;
+        left: 0;
+        top: 0;
+        transform: rotate(-2deg);
+      }
+      .text-1 {
+        left: 4vw;
+        top: 3vh;
+      }
+      .text-2 {
+        left: 9vw;
+        top: 9vh;
+      }
+      .trigger-four-paper {
+        @include trigger(red, 100vh);
+      }
+    }
+  }
+}

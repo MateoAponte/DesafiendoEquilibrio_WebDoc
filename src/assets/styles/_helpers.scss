@@ -1,0 +1,65 @@
+@mixin backgroundContainer($url, $height: '') {
+  @if ($height != '') {
+    /* Set a specific height */
+    min-height: $height;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+  }
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@mixin trigger($color, $pos) {
+  height: 5px;
+  width: 100vw;
+  position: absolute;
+  z-index: 10;
+  background-color: $color;
+  top: $pos;
+  opacity: 1;
+}
+@mixin titleScene($left, $top, $content: '') {
+  left: $left;
+  top: $top;
+  font-size: 128px;
+  font-weight: 600;
+  color: $color-black-notation;
+  font-family: $font-family-7;
+  position: relative;
+  z-index: 5;
+  .title-text {
+    background: linear-gradient(86deg, #01999c, #de9400, #fd4739);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    z-index: 5;
+  }
+  .title-shadow {
+    position: absolute;
+    color: transparent;
+    text-shadow: 0px 1px 5px #000;
+  }
+  &::after {
+    content: '';
+    width: 270px;
+    display: block;
+    box-shadow: 0px 1px 5px #000;
+    background: linear-gradient(86deg, #01999c, #de9400);
+    height: 6px;
+    position: absolute;
+    top: 16vh;
+    left: 10px;
+    border-radius: 2px;
+  }
+  &::before {
+    content: $content;
+    position: absolute;
+    font-family: $font-family-7;
+    color: #fff;
+    top: 17vh;
+    left: 12px;
+    font-size: 36px;
+    text-shadow: 0px 0.5px 3px #000;
+  }
+}

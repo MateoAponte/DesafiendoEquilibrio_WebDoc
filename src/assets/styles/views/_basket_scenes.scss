@@ -1,0 +1,609 @@
+.scene__image--basket {
+  // Scene 1
+  &.scene__intro-basket {
+    height: 550vh;
+    position: relative;
+
+    .note {
+      width: 40vw;
+      height: 20vh;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 80vh;
+      transform: rotate(-10deg);
+      opacity: 0;
+      scale: 0.9;
+
+      .text {
+        font-size: 22px;
+        letter-spacing: 4px;
+        color: $color-black-notation;
+        font-family: $font-family-quote;
+        display: inline-block;
+        position: absolute;
+        margin: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+        &.text-1 {
+          top: 25px;
+          left: 60px;
+          right: 0;
+        }
+        &.text-2 {
+          top: 90px;
+          left: 60px;
+          right: 0;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        transform: rotateX(180deg);
+      }
+    }
+    .scene__image.background {
+      height: 120vh;
+      top: -40px;
+      z-index: 8;
+    }
+    .background-parallax {
+      width: 100vw;
+      height: 300vh;
+      position: absolute;
+      left: 0;
+      top: -200vh;
+    }
+    .scene__trigger {
+      @include trigger(blue, 60vh);
+      z-index: 10;
+    }
+    .title {
+      @include titleScene(40vw, 3vh, 'Episodio 2');
+    }
+  }
+
+  &.scene__second-basket {
+    height: 240vh;
+    position: relative;
+    top: -250vh;
+    right: -130vw;
+    .scene__trigger {
+      @include trigger(red, -10px);
+    }
+    .background {
+      .video {
+        left: -13.2%;
+        top: 0;
+        height: 100%;
+        width: 120%;
+      }
+      border-left: 2px solid #fff;
+      width: 30vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 3;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.scene__third-basket {
+    height: 600vh;
+    position: relative;
+    top: -460vh;
+    right: -130vw;
+    .background {
+      width: 105vw;
+      height: 100vh;
+      position: absolute;
+      border-left: 2px solid #fff;
+
+      z-index: 3;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .scene__trigger {
+      @include trigger(green, -10px);
+    }
+    .trigger__fan {
+      @include trigger(rgb(22, 202, 193), 200vh);
+    }
+    .trigger__fan-item {
+      @include trigger(rgb(202, 22, 133), 270vh);
+    }
+
+    .fan {
+      width: 225px;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 60vh;
+      opacity: 0;
+      margin: auto;
+      z-index: 10;
+
+      &__item {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 300px;
+        text-align: center;
+        -moz-transform-origin: bottom center;
+        -webkit-transform-origin: bottom center;
+        transform-origin: top center;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+
+        &:nth-child(1):hover {
+          transform: translate(-110px, -35px) rotate(-10deg) !important;
+        }
+        &:nth-child(2):hover {
+          transform: translate(-210px, 10px) rotate(-30deg) !important;
+        }
+        &:nth-child(3):hover {
+          transform: translate(0px, -20px);
+        }
+        &:nth-child(4):hover {
+          transform: translate(120px, -10px) rotate(10deg) !important;
+        }
+        &:nth-child(5):hover {
+          transform: translate(220px, 25px) rotate(30deg) !important;
+        }
+      }
+      #scene-basket-fan-item-1 {
+        z-index: 15;
+      }
+      #scene-basket-fan-item-3 {
+        z-index: 20;
+      }
+      #scene-basket-fan-item-4 {
+        z-index: 15;
+      }
+      &__item-image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .team-1 {
+      left: 10%;
+      width: 30vw;
+      height: 35vh;
+      bottom: -140vh;
+    }
+    .team-2 {
+      left: 45%;
+      width: 50vw;
+      height: 35vh;
+      bottom: -140vh;
+    }
+    .team-1,
+    .team-2 {
+      position: absolute;
+      z-index: 5;
+      transition: transform 0.5s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    .backdrop {
+      position: absolute;
+      z-index: 2;
+
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      &__content {
+        left: -20vw;
+        top: -25vh;
+        position: absolute;
+        width: 200vw;
+        height: 100vh;
+        @include backgroundContainer('../../img/basket/scene_3/atardecer.jpg');
+        z-index: 3;
+      }
+    }
+    .overlay {
+      position: absolute;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(#000000, 0.3);
+    }
+    .scene__polaroid {
+      width: 17vw;
+      height: 19vh;
+      position: absolute;
+      top: 100vh;
+      left: 200px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      scale: 0.5;
+      z-index: 20;
+      .scene__polaroid-background {
+        position: absolute;
+        z-index: 15;
+        height: 100%;
+        height: 100%;
+        background-color: rgba(#000000, 0.3);
+        border-radius: 8px;
+        transition: all 0.4s;
+      }
+      img {
+        top: 15px;
+        width: 85%;
+        height: 80%;
+        position: relative;
+        z-index: 10;
+      }
+      .text {
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #fff;
+        text-shadow: 0px 1px 5px #000;
+        display: block;
+        z-index: 15;
+        transition: all 0.4s;
+        position: absolute;
+        top: 45%;
+        opacity: 0;
+        margin: auto;
+        scale: 0.8;
+      }
+      &:hover {
+        .scene__polaroid-background {
+          background-color: rgba(#000000, 0.7);
+        }
+        .text {
+          scale: 1;
+          opacity: 1;
+        }
+      }
+    }
+    .scene__paper {
+      width: 100vw;
+      height: 30vh;
+      position: absolute;
+      top: 100vh;
+      left: 0;
+      z-index: 20;
+      overflow: hidden;
+      border-top: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      .background-paper {
+        position: absolute;
+        width: 100%;
+      }
+      .scene__text {
+        max-width: 50%;
+        display: flex;
+        position: relative;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .text {
+          z-index: 10;
+          color: $color-black-notation;
+          font-family: $font-family-quote;
+          font-size: 36px;
+          margin-bottom: 8px;
+          width: 100% !important;
+          text-align: center;
+        }
+      }
+    }
+
+    .trigger__polaroid-1 {
+      @include trigger(rgb(230, 233, 45), 240vh);
+    }
+    .trigger__polaroid-2 {
+      @include trigger(rgb(230, 233, 45), 280vh);
+    }
+    .trigger__paper {
+      @include trigger(rgb(20, 214, 20), 300vh);
+    }
+    .trigger__polaroid-3 {
+      @include trigger(rgb(230, 233, 45), 320vh);
+    }
+  }
+
+  &.scene__four-basket {
+    height: 450vh;
+    position: relative;
+    top: -460vh;
+    right: 0;
+    border-top: 2px solid #fff;
+    .scene__trigger {
+      @include trigger(rgb(136, 29, 207), -10px);
+    }
+    .trigger__drawn-1 {
+      @include trigger(rgb(136, 29, 207), 0px);
+    }
+    .trigger__drawn-2 {
+      @include trigger(rgb(136, 29, 207), 350px);
+    }
+    .trigger__drawn-3 {
+      @include trigger(rgb(136, 29, 207), 600px);
+    }
+    .trigger__photo-1 {
+      @include trigger(rgb(136, 29, 207), 750px);
+    }
+    .trigger__photo-2 {
+      @include trigger(rgb(136, 29, 207), 900px);
+    }
+    .trigger__wood-wall {
+      @include trigger(rgb(41, 29, 207), 1300px);
+    }
+
+    .pined {
+      position: absolute;
+      z-index: 20;
+      opacity: 0;
+      scale: 1.4;
+      height: auto;
+      border-radius: 8px;
+    }
+    .pined__image {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      left: -5px;
+      top: -20px;
+      margin: auto;
+      z-index: 15;
+    }
+    .drawn_1,
+    .drawn_2,
+    .drawn_3,
+    .drawn_4,
+    .drawn_5,
+    .drawn_6,
+    .drawn_7,
+    .drawn_8 {
+      height: 100%;
+      width: 100%;
+    }
+    .pined-1 {
+      left: 1vw;
+      top: 5vh;
+      width: 18vw;
+      height: 25vh;
+
+      .pined__image {
+        width: 85%;
+        top: -18px;
+        left: 8%;
+      }
+    }
+    .pined-2 {
+      left: 25vw;
+      top: 7vh;
+      width: 12vw;
+      height: 30vh;
+    }
+    .pined-3 {
+      left: 5vw;
+      top: 45vh;
+      width: 13vw;
+      height: 30vh;
+    }
+    .pined-4 {
+      z-index: 5;
+      left: 25vw;
+      top: 60vh;
+      width: 15vw;
+      height: 25vh;
+    }
+    .pined-5 {
+      z-index: 5;
+      left: 45vw;
+      top: 15vh;
+      width: 13vw;
+      height: 35vh;
+    }
+    .pined-6 {
+      z-index: 5;
+      left: 65vw;
+      top: 35vh;
+      width: 25vw;
+      height: 35vh;
+    }
+    .pined-7 {
+      z-index: 5;
+      left: 70vw;
+      top: 85vh;
+      width: 18vw;
+      height: 50vh;
+      .drawn_7 {
+        margin-left: 10px;
+        margin-top: 15px;
+      }
+    }
+    .pined-8 {
+      z-index: 5;
+      font-size: 36px;
+      color: rgb(61, 35, 19);
+      z-index: 5;
+      left: 90vw;
+      top: 65vh;
+      span {
+        display: block;
+        font-family: $font-family-quote;
+        text-shadow: 0px 1px 2px rgb(73, 44, 26);
+      }
+      span:nth-child(1) {
+        transform: rotate(90deg) translate(40px, 40px);
+      }
+      span:nth-child(2) {
+        transform: rotate(90deg) translate(10px, 120px);
+      }
+    }
+
+    .background {
+      width: 105vw;
+      height: 100vh;
+      &:nth-child(1) {
+        z-index: 5;
+      }
+      &:nth-child(2) {
+        z-index: 10;
+      }
+    }
+    .background-wall {
+      width: 200vw;
+      height: 150vh;
+    }
+    .tv {
+      left: 65vw;
+      bottom: -85vh;
+      position: absolute;
+      width: 30vw;
+      height: 40vh;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .portrait {
+        width: 110%;
+        height: 115%;
+        position: absolute;
+        z-index: 15;
+      }
+      .video {
+        width: 85%;
+        height: 115%;
+        top: -55px;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+  }
+
+  &.scene__five-basket {
+    height: 240vh;
+    position: relative;
+    top: -460vh;
+    right: 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+
+    .background {
+      margin-top: -30vh;
+      width: 100vw;
+      height: 130vh;
+      z-index: 15;
+    }
+
+    .nubes {
+      z-index: 5;
+      height: 80vh;
+      width: 100vw;
+      border-top: 2px solid #fff;
+    }
+    .friends {
+      width: 50vw;
+      top: 23vh;
+      left: 0;
+      z-index: 20;
+    }
+    .goal {
+      position: absolute;
+      left: 100vw;
+      top: 0;
+      border-left: 2px solid #fff;
+      border-right: 3px solid #fff;
+      height: 100vh;
+      width: 28vw;
+      z-index: 25;
+      &-image {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .dream__image {
+      position: absolute;
+      z-index: 20;
+      width: 17vw;
+      height: 50vh;
+      left: 70vw;
+      top: -40vh;
+      opacity: 0;
+      animation: my-swing 1.2s ease infinite alternate;
+      transform-origin: top;
+    }
+    .dream__note {
+      position: absolute;
+      z-index: 20;
+      width: 25vw;
+      height: 20vh;
+      left: 67vw;
+      top: 55vh;
+      transform: rotate(-15deg);
+      opacity: 0;
+      &-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+      &-text {
+        top: 7.5vh;
+        left: 2vw;
+        position: absolute;
+        font-size: 22px;
+        letter-spacing: 4px;
+        font-weight: 600;
+        color: $color-black-notation;
+        font-family: $font-family-quote;
+        width: 100%;
+      }
+    }
+
+    .scene__trigger {
+      @include trigger(rgb(207, 29, 163), -10px);
+    }
+    .trigger__dream {
+      @include trigger(rgb(207, 29, 163), 230vh);
+    }
+    .trigger__note {
+      @include trigger(rgb(207, 29, 163), 240vh);
+    }
+    .trigger__goal {
+      @include trigger(rgb(136, 29, 207), 150vh);
+    }
+  }
+}
+#trigger-intro-scene {
+  top: 50vh;
+}
+
+@keyframes my-swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}

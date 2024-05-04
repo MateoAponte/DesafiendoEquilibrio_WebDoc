@@ -1,0 +1,10 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  @include getFontFamily($font-family-7);
+}
+.scene__image-container {
+  position: sticky;
+  top: 0;
+}
