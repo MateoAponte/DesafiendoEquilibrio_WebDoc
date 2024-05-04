@@ -17,6 +17,7 @@ const Picture = ({ pictureInfo, setSelected, setShowOverlay, showOverlay }) => {
   const removeAsActive = (evt) => {
     setIsHovered(false);
   };
+
   const setOverlay = (evt) => {
     setIsClicked(true);
     setIsHovered(true);

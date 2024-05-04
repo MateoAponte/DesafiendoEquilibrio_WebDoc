@@ -1,13 +1,35 @@
 import { MediaPlayer } from './MediaPlayer';
 import Atras from '../../assets/img/icons/atras-icon.png';
+import { useContext, useEffect } from 'react';
+import { SoundContext } from '../../context/SoundContext';
+import { AMBIEND_SOUND } from '../../constants/pathsAthletes.ts';
 
 export const SelectedPicture = ({ children, selected, setSelected, setShowOverlay, className }) => {
+  const { playSound, pauseSound, setIsIncrement, changeSoundUrl, isPlaying } = useContext(SoundContext);
+
   const closeSelection = () => {
-    setShowOverlay(false);
     setTimeout(() => {
+      setShowOverlay(false);
       setSelected({});
-    }, 700);
+      changeSong(AMBIEND_SOUND);
+    }, 500);
   };
+
+  const changeSong = (url) => {
+    setIsIncrement(false);
+    setTimeout(() => {
+      pauseSound();
+      changeSoundUrl(url);
+    }, 1200);
+    setTimeout(() => {
+      playSound();
+      setIsIncrement(true);
+    }, 2000);
+  };
+  useEffect(() => {
+    isPlaying && changeSong(selected.sound);
+  }, [selected]);
+
   return (
     <section className="gallery-media">
       <div className="gallery-media__icon" onClick={() => closeSelection()}>

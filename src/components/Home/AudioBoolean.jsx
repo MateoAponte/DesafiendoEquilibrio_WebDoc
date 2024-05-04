@@ -1,27 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import MutedIcon from '../../assets/img/icons/sin-volumen-icon.png';
 import PlayedIcon from '../../assets/img/icons/con-volumen-icon.png';
-import { useAudioHandler } from '../../hooks/useAudioHandler';
-
+import { SoundContext } from '../../context/SoundContext';
+import { AMBIEND_SOUND } from '../../constants/pathsAthletes.ts';
 export const AudioBoolean = ({ counter }) => {
-  const { loudedMusic, mutedMusic, changeMusic, playMusic } = useAudioHandler();
-  const [isPlayer, setIsPlayed] = useState(true);
+  const { changeSoundUrl, playSound, isIncrement, setIsIncrement } = useContext(SoundContext);
+
   const swapState = () => {
-    setIsPlayed(!isPlayer);
-    isPlayer ? loudedMusic() : mutedMusic();
+    setIsIncrement(!isIncrement);
   };
+
   useEffect(() => {
-    changeMusic(
-      'https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio.appspot.com/o/music%2FAmbient.mp3?alt=media&token=578c197a-8f0d-4a69-8e8f-3e91156b53fa',
-    );
-    if (counter > 1) {
-      playMusic();
-      loudedMusic();
+    if (counter >= 1) {
+      changeSoundUrl(AMBIEND_SOUND);
+      playSound();
     }
   }, [counter]);
   return (
-    <div className="audio-boolean" onClick={() => swapState()}>
-      <img src={isPlayer ? PlayedIcon : MutedIcon} alt="Icon handler to muted or play the home music" />
+    <div className="audio-boolean" onClick={swapState}>
+      <img src={isIncrement ? PlayedIcon : MutedIcon} alt="Icon handler to muted or play the home music" />
     </div>
   );
 };
