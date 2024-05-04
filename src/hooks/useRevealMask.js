@@ -16,6 +16,7 @@ export const useRevealMask = () => {
     }
   };
   const timerBackground = () => {
+    backgroundSetter();
     setInterval(() => {
       backgroundSetter();
     }, 15000);

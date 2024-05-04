@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDetectOrientation } from '../../hooks/useOrientation';
-import GIRAR from '../../assets/img/girar-smartphone_icon.png';
+import GIRAR from '../../assets/img/icons/girar-smartphone_icon.png';
 
 export const OrientationSetter = () => {
   const { onLoadPage } = useDetectOrientation();
