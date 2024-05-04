@@ -48,16 +48,12 @@ export const useScrollMagic = () => {
 
     // we'd only like to use iScroll for mobile...
     if (isMobile) {
-      // configure iScroll
-      var lastScrollTop = 0;
-
       // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
       document.querySelector(wrapper).addEventListener(
         'scroll',
         function () {
           // or window.addEventListener("scroll"....
           var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-          console.log('Execute', st);
           // overwrite scroll position calculation to use child's offset instead of container's scrollTop();
           controller.scrollPos(function () {
             return -st;
