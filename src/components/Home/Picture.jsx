@@ -31,7 +31,7 @@ const Picture = ({ pictureInfo, setSelected, setShowOverlay, showOverlay }) => {
   return (
     <>
       <div className={getPictureStates()} onMouseOver={showAsActive} onMouseLeave={removeAsActive} onClick={setOverlay}>
-        <div className="picture__cover" style={{ backgroundImage: `url(${pictureInfo.picture})` }}></div>
+        <img className="picture__cover" src={pictureInfo.picture} alt="Athletic screen" />
       </div>
     </>
   );

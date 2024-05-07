@@ -27,6 +27,7 @@ export const AudioHandler = () => {
         if (!isIncrement) {
           const volumen = Math.max(0, soundRef.current.volume - 0.1);
           soundRef.current.volume = volumen;
+          console.log('asd');
           decreaseVolume(volumen);
         } else {
           const volumen = Math.min(1, soundRef.current.volume + 0.1);

@@ -95,6 +95,7 @@
       left: 0;
       top: 0;
       background-color: #000;
+      opacity: 0.8;
       width: 100vw;
       height: 100vh;
       z-index: 9;
@@ -161,33 +162,31 @@
     font-size: 48px;
     letter-spacing: 2px;
     font-weight: 700;
-    margin-top: 9vh;
+    margin-top: 4vh;
     position: relative;
     z-index: 8;
   }
   &__gallery {
     display: flex;
-    margin-top: 48px;
+    margin-top: 4vh;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-left: -1rem;
+
     & > div {
       &:nth-child(1) {
-        width: 90%;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 16px 8px;
-        margin-left: 5%;
+        align-items: start;
       }
     }
 
     &-picture {
-      flex-grow: 1;
       height: 100%;
-      margin: 0px 2rem;
       max-width: 19vw;
       background: transparent;
       position: relative;
@@ -195,54 +194,25 @@
       z-index: 6;
       cursor: pointer;
 
+      margin: 0px 2rem;
+
       &:nth-child(1) {
         height: 90%;
-        bottom: 20px;
+        bottom: 10px;
+      }
+      &:nth-child(2) {
+        top: -20px;
       }
       &:nth-child(3) {
         height: 90%;
-        top: 30px;
+        top: 15px;
       }
-      // &:nth-child(2) {
-      //   @include clipPath(polygon(0 0, 100% 0, 80% 100%, 20% 100%), 0px, 0px, -20px, -40px);
-      // }
-      // &:nth-child(3) {
-      //   @include clipPath(polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%), 0px, 0px, 20px, 40px);
-      //   right: 40px;
-      // }
-      // &:nth-child(4) {
-      //   @include clipPath(polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%), 20px, 40px, 15px, 30px);
-      //   right: 80px;
-      // }
       &--active {
         scale: 1.05;
       }
       &--clicked {
         flex-grow: 1.5;
       }
-
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   height: 100%;
-      //   width: 100%;
-      //   left: 0;
-      //   top: 0;
-      //   background-color: $color-pink-3;
-      //   z-index: 4;
-      //   transition: all 0.5s $cubic-bezier-small;
-      // }
-      // &::after {
-      //   content: '';
-      //   position: absolute;
-      //   height: 100%;
-      //   width: 100%;
-      //   left: 0;
-      //   top: 0;
-      //   background-color: $color-yellow-3;
-      //   z-index: 4;
-      //   transition: all 0.5s $cubic-bezier-small;
-      // }
 
       .picture__cover {
         height: 100%;
@@ -313,8 +283,8 @@
     text-shadow: 0px 1px 5px #000;
   }
   &__content {
-    height: 60%;
-    width: 80%;
+    height: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -326,51 +296,29 @@
   }
 }
 .home__link {
-  margin-top: -40px;
+  margin-top: 4vh;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 60%;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  margin-left: 1rem;
   .home__link-item {
     position: relative;
-    width: 200px;
-    height: 200px;
     transition: all 0.45s $cubic-bezier-small;
     cursor: pointer;
     z-index: 8;
+    margin: 0px 4.5rem;
+    &:hover {
+      scale: 1.1;
+    }
     .home__link-image,
     img.home__link-image {
       position: relative;
       right: 20px;
       z-index: 6;
-      width: 100%;
-      height: 100%;
-    }
-    .home__link-image--inclined {
-      transform: rotate(-18deg) !important;
-      height: 180px !important;
-      width: 250px !important;
-      right: 60px !important;
-    }
-    .home__link-image--rotated {
-      transform: rotate(90deg) scaleY(1.5) !important;
-      width: 200px;
-      height: 200px;
-    }
-    .home__link-image--inclined ~ .home__link-text {
-      top: 45%;
-      left: 38%;
-    }
-    .home__link-text {
-      position: absolute;
-      top: 45%;
-      left: 40%;
-      transform: translate(-50%, -50%);
-      z-index: 8;
-      font-size: 24px;
-      @include getFontFamily($font-family-1);
-      font-weight: 600;
+      width: 17vw;
+      height: 12vh;
     }
   }
 }
@@ -397,7 +345,7 @@
     bottom: 0;
   }
   100% {
-    top: -70vh;
+    top: -80vh;
   }
 }
 @keyframes startText {

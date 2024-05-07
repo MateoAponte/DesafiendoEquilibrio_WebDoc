@@ -10,6 +10,10 @@ import Smart from '../assets/img/icons/girar-smartphone_icon.png';
 import Click from '../assets/img/icons/click-icon.png';
 import { AudioBoolean } from '../components/Home/AudioBoolean';
 
+import Contact from '../assets/img/buttons/Contact_Button.png';
+import PQ_Button from '../assets/img/buttons/PQ_Button.png';
+import TeamWork from '../assets/img/buttons/TeamWork_Button.png';
+
 const Home = () => {
   const [selected, setSelected] = useState({});
   const [showOverlay, setShowOverlay] = useState(false);
@@ -101,20 +105,17 @@ const Home = () => {
         </section>
       </section>
       <AudioBoolean counter={counter} />
-      {/* <section className="home__link">
+      <section className="home__link">
         <div className="home__link-item">
-          <img className="home__link-image home__link-image--rotated" src={MarcoMorado} alt="Link option" />
-          <span className="home__link-text">Nuestra inspiración</span>
+          <img className="home__link-image" src={TeamWork} alt="Link option" />
         </div>
         <div className="home__link-item">
-          <img className="home__link-image home__link-image--inclined" src={MarcoNaranja} alt="Link option" />
-          <span className="home__link-text">¿Quiénes participaron?</span>
+          <img className="home__link-image" src={PQ_Button} alt="Link option" />
         </div>
         <div className="home__link-item">
-          <img className="home__link-image home__link-image--inclined" src={MarcoAmarillo} alt="Link option" />
-          <span className="home__link-text">¿Donde contactarnos?</span>
+          <img className="home__link-image" src={Contact} alt="Link option" />
         </div>
-      </section> */}
+      </section>
     </main>
   );
 };
