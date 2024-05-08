@@ -43,9 +43,6 @@ export const SelectedPicture = ({ children, selected, setSelected, setShowOverla
             <MediaPlayer url={selected.url} className={className} />
           </div>
         </div>
-        <div className="home__gallery-selected-closed" onClick={() => closeSelection()}>
-          X
-        </div>
       </div>
     </section>
   );
