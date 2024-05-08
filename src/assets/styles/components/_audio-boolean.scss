@@ -1,11 +1,12 @@
 .audio-boolean {
-  position: absolute;
+  position: fixed;
   right: 3vw;
   top: 5vh;
-  z-index: 5;
+  z-index: 100;
   cursor: pointer;
   img {
     height: 3rem;
     width: 3rem;
+    filter: drop-shadow(-1.2px 0px 0.5px #9b9b9b);
   }
 }

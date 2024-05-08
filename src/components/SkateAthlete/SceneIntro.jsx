@@ -56,7 +56,7 @@ export const SceneIntro = () => {
       '#intro_note',
       [
         {
-          x: '-85vw',
+          x: '-90vw',
         },
       ],
       8000,

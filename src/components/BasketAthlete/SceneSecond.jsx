@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export const SceneSecond = () => {
   const { scrollTrigger } = useScrollMagic();
-  useScrollHandler('#scene-basket-tv', videoHandler);
+  useScrollHandler('#scene-basket-play', videoHandler);
   useEffect(() => {
     scrollTrigger(
       '#trigger-second-scene',
@@ -27,7 +27,7 @@ export const SceneSecond = () => {
     <section className="scene scene__image--basket scene__second-basket" id="second_scene_main">
       <div className="scene__image-container" id="scene-basket-intro">
         <div className="scene__image background" id="second_background_basket">
-          <video className="scene__image video" id="scene-basket-tv" loop muted>
+          <video className="scene__image video" id="scene-basket-play" loop muted>
             <source src={BackgroundVideo} type="video/mp4" />
           </video>
           <div className="backdrop"></div>

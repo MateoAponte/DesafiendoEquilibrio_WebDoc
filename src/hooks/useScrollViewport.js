@@ -13,6 +13,9 @@ export const videoHandler = (el) => () => {
       rect.bottom <= clientHeight + clientHeightOffset &&
       rect.right <= clientWidth + clientWidthOffset &&
       getPageHeight() - window.scrollY >= window.innerHeight;
+    if (el === '#scene-basket-tv') {
+      console.log(getPageHeight() - window.scrollY >= window.innerHeight, rect.bottom <= clientHeight + clientHeightOffset);
+    }
     isWatched ? el.play() : el.pause();
   }
 };
@@ -29,7 +32,6 @@ export const fixSpacing = (el, position) => () => {
     const rect = el.getBoundingClientRect();
     const yPos = rect.top;
     const isInOriginalPos = window.scrollY >= position;
-    console.log('Pos: ', position);
     yPos <= 0 && isInOriginalPos ? (el.style.position = 'fixed') : (el.style.position = 'sticky');
   }
 };

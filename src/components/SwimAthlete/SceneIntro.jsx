@@ -26,7 +26,17 @@ export const SceneIntro = () => {
       '#intro_competence_2_swim',
       [
         {
-          x: '-20vw',
+          x: '-27vw',
+        },
+      ],
+      8000,
+    );
+    scrollTrigger(
+      '#trigger-intro-scene',
+      '#intro_athlete_swim',
+      [
+        {
+          x: '-19vw',
         },
       ],
       8000,

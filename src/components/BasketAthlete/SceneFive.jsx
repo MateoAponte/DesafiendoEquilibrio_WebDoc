@@ -95,7 +95,10 @@ export const SceneFive = () => {
         <img className="scene__image friends" alt="background scene" id="scene-friends-people" src={Friends} />
         <div className="goal" id="scene-basket-goal">
           <video className="scene__image goal-image" id="scene-basket-goal-video" loop muted>
-            <source src="gs://desafiandoelequilibrio.appspot.com/Goal.mp4?alt=media&token=450bbae3-b991-485e-ac1b-c8e283c925c0" type="video/mp4" />
+            <source
+              src="https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio.appspot.com/o/Goal.mp4?alt=media&token=185950a1-df4f-44ad-8302-0f004fd432b6"
+              type="video/mp4"
+            />
           </video>
         </div>
         <div className="dream">

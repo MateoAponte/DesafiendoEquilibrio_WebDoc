@@ -17,7 +17,7 @@
   z-index: 10;
   background-color: $color;
   top: $pos;
-  opacity: 1;
+  opacity: 0;
 }
 @mixin titleScene($left, $top, $content: '') {
   left: $left;

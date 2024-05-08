@@ -8,3 +8,26 @@
   position: sticky;
   top: 0;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #666666;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border: 2px solid #9b9b9b;
+  background: linear-gradient(#01999c, #de9400, #fd4739);
+  border-radius: 8px;
+}
+
+body {
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}

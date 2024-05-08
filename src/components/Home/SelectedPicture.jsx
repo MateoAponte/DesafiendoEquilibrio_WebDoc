@@ -12,6 +12,7 @@ export const SelectedPicture = ({ children, selected, setSelected, setShowOverla
       setShowOverlay(false);
       setSelected({});
       changeSong(AMBIEND_SOUND);
+      window.scrollTo(0, 0);
     }, 500);
   };
 

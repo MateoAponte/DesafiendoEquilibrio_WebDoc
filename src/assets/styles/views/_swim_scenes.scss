@@ -12,20 +12,22 @@
       @include titleScene(65vw, 0vh, 'Episodio 3');
     }
     .athlete-1 {
-      top: 20vh;
-      left: 10vw;
+      top: 9vh;
+      left: 45vw;
       z-index: 5;
     }
     .athlete-2 {
       width: 18vw;
       top: 20vh;
-      left: 33vw;
+      left: 25vw;
       transform: rotate(-10deg);
+      scale: 0.75 !important;
     }
     .athlete-3 {
       width: 18vw;
       top: 1vh;
-      left: 47vw;
+      left: 26vw;
+      scale: 0.7 !important;
     }
     .note {
       display: none;
@@ -136,6 +138,7 @@
       width: 20vw;
       height: 35vh;
       scale: 0.8;
+      border-radius: 20px;
 
       z-index: 5;
       opacity: 0.8;

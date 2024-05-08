@@ -99,7 +99,7 @@
         font-weight: 600;
         color: $color-black-notation;
         font-family: $font-family-quote;
-        top: 60px;
+        top: 15vh;
         left: -40px;
         text-align: center;
         width: 100%;
@@ -153,22 +153,22 @@
           }
         }
         &.image-1 {
-          top: 15vh;
-          left: 10vw;
+          top: 10vh;
+          left: 11vw;
           rotate: -15deg;
         }
         &.image-2 {
-          top: 25vh;
-          left: 60vw;
+          top: 18vh;
+          left: 64vw;
           rotate: 25deg;
         }
         &.image-3 {
-          top: 70vh;
+          top: 65vh;
           left: 15vw;
           rotate: 25deg;
         }
         &.image-4 {
-          top: 65vh;
+          top: 55vh;
           left: 55vw;
           rotate: -10deg;
         }
@@ -201,6 +201,11 @@
       position: absolute;
       z-index: 30;
       top: -10vh;
+      left: -20vw;
+      .ambulance {
+        width: 150vw;
+        height: 150vh;
+      }
     }
     .five-scene {
       @include trigger(rgb(0, 255, 55), -50vh);
