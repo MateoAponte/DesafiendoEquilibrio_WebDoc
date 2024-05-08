@@ -1,3 +1,7 @@
+import PosterBasket from '../assets/img/athletes/posters/Poster-Fer.png';
+import PosterSkate from '../assets/img/athletes/posters/Poster-Aleja.png';
+import PosterSwim from '../assets/img/athletes/posters/Poster-Sofi.png';
+
 export const ATHLETE = {
   BASKET: 'basket',
   SWIM: 'swim',
@@ -18,6 +22,12 @@ export const ATHLETHES_SOUND = {
     'https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio.appspot.com/o/music%2FSwim.mp3?alt=media&token=7db4579d-21b8-444c-81ac-89083aff0098',
   [ATHLETE.SKATE]:
     'https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio.appspot.com/o/music%2FSkate.mp3?alt=media&token=c264f8c9-b11d-4def-89eb-07b9806dcfd3',
+};
+
+export const ATHLETHES_POSTER = {
+  [ATHLETE.BASKET]: PosterBasket,
+  [ATHLETE.SWIM]: PosterSwim,
+  [ATHLETE.SKATE]: PosterSkate,
 };
 
 export const AMBIEND_SOUND =

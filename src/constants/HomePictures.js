@@ -5,7 +5,7 @@ import SKATING_IMAGE from '../assets/img/athletes/Default-Aleja.png';
 import { Scene as BasketScene } from '../components/BasketAthlete/Scene';
 import { Scene as SkateScene } from '../components/SkateAthlete/Scene';
 import { Scene as SwimScene } from '../components/SwimAthlete/Scene';
-import { ATHLETE, ATHLETHES_SOUND, ATHLETHES_VIDEO } from './pathsAthletes.ts';
+import { ATHLETE, ATHLETHES_POSTER, ATHLETHES_SOUND, ATHLETHES_VIDEO } from './pathsAthletes.ts';
 
 export const HOME_PICTURES = [
   {
@@ -14,6 +14,7 @@ export const HOME_PICTURES = [
     scenes: <SkateScene />,
     url: ATHLETHES_VIDEO[ATHLETE.SKATE],
     sound: ATHLETHES_SOUND[ATHLETE.SKATE],
+    poster: ATHLETHES_POSTER[ATHLETE.SKATE],
   },
   {
     name: 'Hola',
@@ -21,6 +22,7 @@ export const HOME_PICTURES = [
     scenes: <BasketScene />,
     url: ATHLETHES_VIDEO[ATHLETE.BASKET],
     sound: ATHLETHES_SOUND[ATHLETE.BASKET],
+    poster: ATHLETHES_POSTER[ATHLETE.BASKET],
   },
   {
     name: 'Hola',
@@ -28,5 +30,6 @@ export const HOME_PICTURES = [
     scenes: <SwimScene />,
     url: ATHLETHES_VIDEO[ATHLETE.SWIM],
     sound: ATHLETHES_SOUND[ATHLETE.SWIM],
+    poster: ATHLETHES_POSTER[ATHLETE.SWIM],
   },
 ];

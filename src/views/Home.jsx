@@ -4,23 +4,17 @@ import SelectedPicture from '../components/Home/SelectedPicture';
 import { useEffect, useState } from 'react';
 import { useRevealMask } from '../hooks/useRevealMask';
 
-import Maximize from '../assets/img/icons/maximize-icon.png';
-import Headphones from '../assets/img/icons/headphones-icon.png';
-import Smart from '../assets/img/icons/girar-smartphone_icon.png';
-import Click from '../assets/img/icons/click-icon.png';
 import { AudioBoolean } from '../components/Home/AudioBoolean';
 
 import Contact from '../assets/img/buttons/Contact_Button.png';
 import PQ_Button from '../assets/img/buttons/PQ_Button.png';
 import TeamWork from '../assets/img/buttons/TeamWork_Button.png';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [selected, setSelected] = useState({});
   const [showOverlay, setShowOverlay] = useState(false);
-  const [canInteract, setCanInteract] = useState(false);
-  const [sequenceStep, setSequenceStep] = useState('render-sequence');
   const { onMouseMove, timerBackground } = useRevealMask();
-  const [counter, setCounter] = useState(0);
   useEffect(() => {
     document.addEventListener('click', (evt) => {
       if (evt.target.className.indexOf('home__gallery-overlay') !== -1) {
@@ -40,45 +34,9 @@ const Home = () => {
     return `${className} ${showOverlay ? `${className}--active` : ''}`;
   };
 
-  const initSequence = () => {
-    if (counter < 1) {
-      setCounter(counter + 1);
-      setSequenceStep('remove-element');
-      setTimeout(() => {
-        setCanInteract(true);
-        setSequenceStep('init-secuence');
-      }, 1000);
-    }
-  };
-
   return (
-    <main className="home" onClick={() => initSequence()}>
-      <section className={`home__main-screen ${sequenceStep}`}>
-        <div className="home__title-container">
-          <h1 className="title-text">DESAFIANDO EL EQUILIBRIO</h1>
-          <h1 className="title-shadow">DESAFIANDO EL EQUILIBRIO</h1>
-        </div>
-        <div className="background-screen"></div>
-        <div className="home-recommendation">
-          {canInteract ? (
-            <span className="home-recommendation-icon">
-              <img src={Maximize} alt="Maximize screen icon" />
-              <img src={Headphones} alt="Use headphones to interactive experience" />
-              <img src={Smart} alt="Change to landscape view" />
-            </span>
-          ) : (
-            <span className="home-recommendation-icon">
-              <img src={Click} alt="Please interact with the app" />
-            </span>
-          )}
-
-          {canInteract ? (
-            <span className="home-recommendation-text">Se recomienda usar la página de esa forma para mejorar la experiencia</span>
-          ) : (
-            <span className="home-recommendation-text">Da click para comenzar</span>
-          )}
-        </div>
-      </section>
+    <main className="home">
+      <section className={`home__main-screen `}></section>
       <section className="home__title">
         <section className="home__description">
           <span>Conoce las historias de vida detrás de estos deportistas universitarios </span>
@@ -104,16 +62,22 @@ const Home = () => {
           </div>
         </section>
       </section>
-      <AudioBoolean counter={counter} />
+      <AudioBoolean />
       <section className="home__link">
         <div className="home__link-item">
-          <img className="home__link-image" src={TeamWork} alt="Link option" />
+          <Link to="/equipo">
+            <img className="home__link-image" src={TeamWork} alt="Link option" />
+          </Link>
         </div>
         <div className="home__link-item">
-          <img className="home__link-image" src={PQ_Button} alt="Link option" />
+          <Link to="/proyecto">
+            <img className="home__link-image" src={PQ_Button} alt="Link option" />
+          </Link>
         </div>
         <div className="home__link-item">
-          <img className="home__link-image" src={Contact} alt="Link option" />
+          <Link to="/contactanos">
+            <img className="home__link-image" src={Contact} alt="Link option" />
+          </Link>
         </div>
       </section>
     </main>

@@ -7,6 +7,7 @@ const SoundProvider = ({ children }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isIncrement, setIsIncrement] = useState(true);
   const [volume, setVolume] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   const playSound = () => setIsPlaying(true);
   const pauseSound = () => setIsPlaying(false);
@@ -21,6 +22,8 @@ const SoundProvider = ({ children }) => {
         isPlaying,
         volume,
         isIncrement,
+        counter,
+        setCounter,
         setIsIncrement,
         playSound,
         pauseSound,

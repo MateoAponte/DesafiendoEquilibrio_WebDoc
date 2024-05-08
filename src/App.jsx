@@ -3,11 +3,13 @@ import { ROUTES } from './router/routes.js';
 import { OrientationSetter } from './components/Home/Orientation.jsx';
 import { AudioHandler } from './components/AudioHandler.jsx';
 import { SoundProvider } from './context/SoundContext.jsx';
+import { Animation } from './components/Home/Animation.jsx';
 
 const App = () => {
   return (
     <div className="main">
       <SoundProvider>
+        <Animation />
         <OrientationSetter />
         <AudioHandler />
         <BrowserRouter>

@@ -40,7 +40,7 @@ export const SelectedPicture = ({ children, selected, setSelected, setShowOverla
       <div className="gallery-artist" smooth-parallax="" start-position="0" end-position="1">
         <div>
           <div className="gallery-artist__trailer">
-            <MediaPlayer url={selected.url} className={className} />
+            <MediaPlayer url={selected.url} className={className} poster={selected.poster} />
           </div>
         </div>
       </div>
