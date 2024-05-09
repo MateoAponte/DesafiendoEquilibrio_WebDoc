@@ -1,0 +1,28 @@
+.project {
+  width: 100vw;
+  height: 100vh;
+  .team-work__title {
+    position: relative;
+    top: 10vh;
+  }
+  &-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 8rem;
+  }
+
+  &__image {
+    min-height: 55vh;
+    min-width: 30vw;
+    margin-left: 3rem;
+  }
+  &__text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
+}

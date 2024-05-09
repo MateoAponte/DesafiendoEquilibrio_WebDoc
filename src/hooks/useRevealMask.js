@@ -1,11 +1,14 @@
+import { useEffect } from 'react';
 import CanchaBasket from '../assets/img/backgrounds/Cancha_Basket.png';
 import CanchaUltimate from '../assets/img/backgrounds/Cancha_Ultimate.png';
 import CanchaAtl from '../assets/img/backgrounds/Pista_Atl.png';
+import { useLocation } from 'react-router-dom';
 
 const Backgrounds = [CanchaBasket, CanchaUltimate, CanchaAtl];
 
 export const useRevealMask = () => {
   let backgroundPos = 0;
+  const location = useLocation();
   const backgroundSetter = () => {
     const revealImg = document.querySelector('.home__mask');
     if (backgroundPos < Backgrounds.length - 1) {
@@ -21,6 +24,15 @@ export const useRevealMask = () => {
       backgroundSetter();
     }, 15000);
   };
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      const container = document.querySelector('.home');
+      console.log(container);
+      container.removeEventListener('mousemove', () => {});
+      container.removeEventListener('mouseenter', () => {});
+      container.removeEventListener('mouseleave', () => {});
+    }
+  }, [location.pathname]);
   const onMouseMove = () => {
     const container = document.querySelector('.home');
     const revealImg = document.querySelector('.home__mask');

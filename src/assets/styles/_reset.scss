@@ -31,3 +31,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
+.generic-container {
+  background-image: url('../img/Pizarra.png');
+  background-size: 100vw 100vh;
+}
+.back-icon {
+  left: 2vw;
+  top: 5vh;
+  width: 4rem;
+  height: 3rem;
+  position: fixed;
+}

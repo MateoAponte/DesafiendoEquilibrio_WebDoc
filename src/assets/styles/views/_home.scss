@@ -358,7 +358,32 @@
     scale: 0.8;
   }
 }
-
+.disabled-secuence {
+  .home-recommendation {
+    animation: none;
+    display: none;
+  }
+  .home__title-container {
+    display: none;
+  }
+  .background-screen {
+    display: none;
+  }
+}
+.loaded-secuence {
+  .home__title-container {
+    top: -80vh;
+    scale: 1;
+    opacity: 1;
+  }
+  .background-screen {
+    display: none;
+  }
+  .home-recommendation {
+    animation: none;
+    display: none;
+  }
+}
 .init-secuence {
   .background-screen {
     animation: startBackground 8s forwards ease-out;
