@@ -2,7 +2,6 @@ import { HOME_PICTURES } from '../constants/HomePictures';
 import Picture from '../components/Home/Picture';
 import SelectedPicture from '../components/Home/SelectedPicture';
 import { useEffect, useState } from 'react';
-import { useRevealMask } from '../hooks/useRevealMask';
 
 import { AudioBoolean } from '../components/Home/AudioBoolean';
 
@@ -14,7 +13,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const [selected, setSelected] = useState({});
   const [showOverlay, setShowOverlay] = useState(false);
-  const { onMouseMove, timerBackground } = useRevealMask();
   useEffect(() => {
     document.addEventListener('click', (evt) => {
       if (evt.target.className.indexOf('home__gallery-overlay') !== -1) {
@@ -26,8 +24,6 @@ const Home = () => {
         }
       }
     });
-    onMouseMove();
-    timerBackground();
   }, []);
 
   const getOverlayStatus = (className) => {

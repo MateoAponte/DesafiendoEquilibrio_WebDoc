@@ -3,6 +3,7 @@ import { ROUTES } from './router/routes.js';
 import { OrientationSetter } from './components/Home/Orientation.jsx';
 import { AudioHandler } from './components/AudioHandler.jsx';
 import { GoToBack } from './components/Home/GoToBack.jsx';
+import { MaskHandler } from './components/Home/MaskHandler.jsx';
 import { SoundProvider } from './context/SoundContext.jsx';
 import { Animation } from './components/Home/Animation.jsx';
 import { RenderProvider } from './context/RenderContext.jsx';
@@ -13,6 +14,7 @@ const App = () => {
       <SoundProvider>
         <RenderProvider>
           <BrowserRouter>
+            <MaskHandler />
             <GoToBack />
             <Animation />
             <OrientationSetter />

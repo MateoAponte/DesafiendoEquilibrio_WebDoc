@@ -3,8 +3,8 @@ import MutedIcon from '../../assets/img/icons/sin-volumen-icon.png';
 import PlayedIcon from '../../assets/img/icons/con-volumen-icon.png';
 import { SoundContext } from '../../context/SoundContext';
 import { AMBIEND_SOUND } from '../../constants/pathsAthletes.ts';
-export const AudioBoolean = ({ counter }) => {
-  const { changeSoundUrl, playSound, isIncrement, setIsIncrement } = useContext(SoundContext);
+export const AudioBoolean = () => {
+  const { changeSoundUrl, playSound, isIncrement, setIsIncrement, counter } = useContext(SoundContext);
 
   const swapState = () => {
     setIsIncrement(!isIncrement);
