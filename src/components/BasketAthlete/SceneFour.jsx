@@ -181,8 +181,8 @@ export const SceneFour = () => {
           <img className="scene__image drawn_7" src={Foto_4} alt="Fernando as Young 1" />
         </div>
         <div className="scene__image pined pined-8" id="scene-text-1">
-          <span>Cada piedra en el camino</span>
-          <span>Es el camino en si</span>
+          <span>Cada día este deporte</span>
+          <span>me motiva con más pasión.</span>
         </div>
       </div>
       <div className="scene__trigger" id="trigger-four-scene"></div>

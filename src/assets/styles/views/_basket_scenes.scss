@@ -569,8 +569,10 @@
         width: 100%;
       }
       &-text {
-        top: 7.5vh;
-        left: 2vw;
+        max-width: 70%;
+        top: 5vh;
+        transform: rotate(-2deg);
+        left: 3vw;
         position: absolute;
         font-size: 22px;
         letter-spacing: 4px;

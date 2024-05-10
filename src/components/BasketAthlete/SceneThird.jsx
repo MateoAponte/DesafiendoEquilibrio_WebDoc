@@ -236,8 +236,8 @@ export const SceneThird = () => {
         <div className="scene__image scene__paper" id="scene-paper">
           <img className="background-paper" id="background-paper" src={Papel} alt="escena de papel" />
           <div className="scene__text">
-            <h1 className="text">"Conseguir buenos jugadores es fácil.</h1>
-            <h1 className="text">Conseguir que jueguen juntos es la parte más difícil"</h1>
+            <h1 className="text">"El trabajo en equipo es fundamental, </h1>
+            <h1 className="text">dentro y fuera de la cancha."</h1>
           </div>
         </div>
       </div>

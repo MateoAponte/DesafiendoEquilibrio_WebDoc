@@ -105,7 +105,7 @@ export const SceneFive = () => {
           <img className="dream__image" src={Atrapasueños} alt="basket dream" id="dream-catcher" />
           <div className="dream__note" id="dream-text">
             <img className="dream__note-image" src={Nota} alt="note dream" />
-            <span className="dream__note-text">Mi sueño a 3 metros de altura</span>
+            <span className="dream__note-text">Mi sinergia va más allá de una cesta de 3 puntos.</span>
           </div>
         </div>
       </div>
