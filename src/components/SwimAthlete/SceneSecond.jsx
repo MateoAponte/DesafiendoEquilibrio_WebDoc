@@ -54,7 +54,7 @@ export const SceneSecond = () => {
             <source src={Swimming} type="video/mp4" />
           </video>
         </div>
-        <span className="scene__image text">Respira, relajate y fluye</span>
+        <span className="scene__image text">Volverse una con el agua.</span>
       </div>
       <div className="scene__trigger trigger-second-scene" id="trigger-second-scene"></div>
       <div className="scene__trigger trigger-background" id="trigger-swim-second-background"></div>

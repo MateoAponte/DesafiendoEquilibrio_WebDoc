@@ -66,8 +66,8 @@ export const SceneFour = () => {
         <img className="scene__image winner-3" src={Winners_3} alt="background stadium" id="winner_swim_3" />
         <div className="scene__image paper" id="paper_swim">
           <img className="paper__image" src={Paper} alt="background stadium" />
-          <span className="paper__text text-1">Quiero poder mirar hacia atrás y decir:</span>
-          <span className="paper__text text-2">'Hice todo lo que pude y tuve éxito'.</span>
+          <span className="paper__text text-1">El éxito no se mide en las medallas, </span>
+          <span className="paper__text text-2">se mide en la determinación de querer seguir nadando.</span>
         </div>
         <div className="scene__image video_scene" id="four_competence">
           <video className="scene__image video" id="four_scene_swimming" loop muted>

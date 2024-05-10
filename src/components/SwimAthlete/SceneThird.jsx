@@ -167,10 +167,10 @@ export const SceneThird = () => {
         <img className="scene__image beach" alt="background athlete" id="third_beach_swim" src={Playa} />
         <img className="scene__image sky" alt="background scene" id="third_sky_swim" src={Sky} />
         <span className="scene__image text text-1" id="swim-third-text-skew-1">
-          La diferencia entre lo posible e imposible
+          En cada inmersión encuentro calma,
         </span>
         <span className="scene__image text text-2" id="swim-third-text-skew-2">
-          Reside en la determinación
+          encuentro un propósito.
         </span>
         <img className="scene__image photo photo-1" alt="background scene" id="firts_photo_scene" src={Photo_2} />
         <img className="scene__image photo photo-2" alt="background scene" id="second_photo_scene" src={Photo_1} />
