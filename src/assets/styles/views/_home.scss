@@ -163,10 +163,6 @@
     &:hover {
       scale: 1.05;
     }
-    @media screen and (max-width: 800px) {
-      margin-bottom: 2vh;
-      font-size: 1rem;
-    }
   }
   &__content {
     height: 50%;
@@ -203,8 +199,8 @@
       position: relative;
       right: 20px;
       z-index: 6;
-      width: 15vw;
-      height: 11vh;
+      width: 14vw;
+      height: 10vh;
     }
   }
 }
@@ -400,9 +396,6 @@
   font-size: 3rem;
   right: 0;
   text-align: center;
-  @media screen and (max-width: 800px) {
-    font-size: 1.15rem;
-  }
 }
 .title-text {
   position: absolute;

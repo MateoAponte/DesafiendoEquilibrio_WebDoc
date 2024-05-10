@@ -43,18 +43,33 @@ html {
   position: fixed;
   z-index: 15;
 }
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 8.4px;
-  }
-}
 @media screen and (max-width: 1600px) {
   html {
     font-size: 13px;
   }
 }
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 8.4px;
+  }
+}
 @media screen and (min-width: 2560px) {
   html {
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 2px;
   }
 }
