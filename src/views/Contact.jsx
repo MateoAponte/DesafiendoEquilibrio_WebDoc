@@ -3,7 +3,7 @@ export const Contact = () => {
     const mailto = 'Desafiandoelequilibriodu@gmail.com';
     const subject = '¡Quiero Desafiar el equilibrio!';
     const body = '¡Hola! Cuéntame más acerca de este proyecto y como puedo participar.';
-    return `mailto:${mailto}?subject=${subject}&body=${body}`;
+    window.location = `mailto:${mailto}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -18,7 +18,7 @@ export const Contact = () => {
         <h1 className="team-work__title-shadow">Recuerda que</h1>
       </div>
       <span className="contact-text">Si quieres dejarnos tú opinión, ser parte de nuestro equipo de trabajo o contar tú historia puedes contactarnos a:</span>
-      <div className="team-work__title contact-title-3" onClick={() => (window.location = sendEmail())}>
+      <div className="team-work__title contact-title-3" onClick={() => sendEmail()}>
         <h1 className="team-work__title-text">Desafiandoelequilibriodu@gmail.com</h1>
         <h1 className="team-work__title-shadow">Desafiandoelequilibriodu@gmail.com</h1>
       </div>
