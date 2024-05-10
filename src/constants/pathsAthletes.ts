@@ -8,12 +8,9 @@ export const ATHLETE = {
   SKATE: 'skate',
 };
 export const ATHLETHES_VIDEO = {
-  [ATHLETE.BASKET]:
-    'https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio-c2086.appspot.com/o/videos%2FFernando.mp4?alt=media&token=e8995372-cba2-48e9-92f2-b2d853757ef2',
-  [ATHLETE.SWIM]:
-    'https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio-c2086.appspot.com/o/videos%2FSofia.mp4?alt=media&token=bfaceea0-7506-4e00-a59f-b5f9a611b602',
-  [ATHLETE.SKATE]:
-    'https://firebasestorage.googleapis.com/v0/b/desafiandoelequilibrio-c2086.appspot.com/o/videos%2FAlejandra.mp4?alt=media&token=118bcc68-7015-4e01-a16f-d70572b4b133',
+  [ATHLETE.BASKET]: 'https://www.youtube.com/embed/A9hgn-8TB3s?si=iAdVLG-tM2DBLKtS',
+  [ATHLETE.SWIM]: 'https://www.youtube.com/embed/Moe1eazwuX4?si=QqH3nr-Slt-pal4X',
+  [ATHLETE.SKATE]: 'https://www.youtube.com/embed/IS4MjdMzC2E?si=tX3YMKm7AiFt-DJu',
 };
 export const ATHLETHES_SOUND = {
   [ATHLETE.BASKET]:
