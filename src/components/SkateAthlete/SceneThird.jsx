@@ -81,7 +81,7 @@ export const SceneThird = () => {
         <div className="scene__image-container" id="scene-skate-third">
           <div className="scene__image paper">
             <span className="paper-title" id="third-scene-title">
-              La virtud de la disciplina
+              La fuerza de mi espíritu.
             </span>
             <img className="paper__background" src={Paper} alt="paper Note" id="third-scene-paper" />
             <div className="image image-1 image-vertical" id="skate-third-photo-1">

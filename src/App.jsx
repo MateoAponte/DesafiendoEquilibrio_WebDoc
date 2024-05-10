@@ -7,13 +7,24 @@ import { MaskHandler } from './components/Home/MaskHandler.jsx';
 import { SoundProvider } from './context/SoundContext.jsx';
 import { Animation } from './components/Home/Animation.jsx';
 import { RenderProvider } from './context/RenderContext.jsx';
+import ICON from '../src/assets/img/icons/basketball.ico';
+import { Helmet } from 'react-helmet';
+import { AudioBoolean } from './components/Home/AudioBoolean';
 
 const App = () => {
   return (
     <div className="main">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Desafiando el Equilibrio</title>
+        <meta name="description" content="Documental Web interactivo" />
+        <link rel="icon" type="image/png" href={ICON} sizes="16x16" data-react-helmet="true" />
+      </Helmet>
       <SoundProvider>
         <RenderProvider>
           <BrowserRouter>
+            <AudioBoolean />
+
             <MaskHandler />
             <GoToBack />
             <Animation />

@@ -11,6 +11,7 @@ export const useRevealMask = () => {
   const location = useLocation();
   const backgroundSetter = () => {
     const revealImg = document.querySelector('.home__mask');
+    console.log(backgroundPos);
     if (revealImg && backgroundPos < Backgrounds.length - 1) {
       revealImg.style.backgroundImage = `url(${Backgrounds[backgroundPos]}`;
       backgroundPos += 1;

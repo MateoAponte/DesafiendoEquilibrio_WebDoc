@@ -3,8 +3,6 @@ import Picture from '../components/Home/Picture';
 import SelectedPicture from '../components/Home/SelectedPicture';
 import { useEffect, useState } from 'react';
 
-import { AudioBoolean } from '../components/Home/AudioBoolean';
-
 import Contact from '../assets/img/buttons/Contact_Button.png';
 import PQ_Button from '../assets/img/buttons/PQ_Button.png';
 import TeamWork from '../assets/img/buttons/TeamWork_Button.png';
@@ -58,7 +56,6 @@ const Home = () => {
           </div>
         </section>
       </section>
-      <AudioBoolean />
       <section className="home__link">
         <div className="home__link-item">
           <Link to="/equipo">

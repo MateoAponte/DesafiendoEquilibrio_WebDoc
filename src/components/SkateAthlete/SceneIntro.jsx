@@ -82,8 +82,8 @@ export const SceneIntro = () => {
         <img className="scene__image athlete athlete-2" alt="background athlete" id="intro_competence_1_skate" src={Competence_1} />
         <img className="scene__image athlete athlete-3" alt="background athlete" id="intro_competence_2_skate" src={Competence_2} />
         <div className="scene__image note" id="intro_note">
-          <span className="text text-1">Sin resistencia en el camino</span>
-          <span className="text text-2">No hay progreso notorio</span>
+          <span className="text text-1">Con cada carrera logro </span>
+          <span className="text text-2">sentirme aún más viva</span>
           <img alt="note" src={Note} />
         </div>
         <div className="scene__image title" id="intro-skate-title">

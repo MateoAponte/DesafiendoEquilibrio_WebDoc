@@ -101,7 +101,7 @@ export const SceneFive = () => {
           </div>
           <div className="scene__image message" id="scene-five-text">
             <p className="message__item">Con más ganas de</p>
-            <p className="message__item">vivir que nunca</p>
+            <p className="message__item">obtener mi revancha</p>
           </div>
         </div>
         <div className="scene__trigger five-scene" id="trigger-five-scene"></div>

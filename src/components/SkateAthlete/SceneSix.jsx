@@ -133,7 +133,7 @@ export const SceneSix = () => {
           </div>
         </div>
         <span className="scene__image text" id="six-text-scene">
-          El límite esta en tus sueños
+          El verdadero desafío es romper tus límites
         </span>
       </div>
       <div className="scene__trigger trigger-six" id="trigger-six-scene"></div>
