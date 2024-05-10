@@ -37,8 +37,6 @@ const Home = () => {
         </section>
       </section>
       <section className="home__content">
-        <section className="home__background"></section>
-        <section className="home__mask"></section>
         <section className="home__gallery">
           <div>
             {HOME_PICTURES.map((picture, index) => (

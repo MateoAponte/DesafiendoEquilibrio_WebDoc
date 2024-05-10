@@ -1,19 +1,22 @@
 import { useEffect } from 'react';
-import CanchaBasket from '../assets/img/backgrounds/Cancha_Basket.png';
-import CanchaUltimate from '../assets/img/backgrounds/Cancha_Ultimate.png';
-import CanchaAtl from '../assets/img/backgrounds/Pista_Atl.png';
 import { useLocation } from 'react-router-dom';
 
-const Backgrounds = [CanchaBasket, CanchaUltimate, CanchaAtl];
-
-export const useRevealMask = () => {
+export const useRevealMask = (backgrounds, mask = '.control__mask') => {
   let backgroundPos = 0;
   const location = useLocation();
+  const checkBackgrounds = () => {
+    if (backgrounds.length === 1) {
+      const revealImg = document.querySelector(mask);
+      console.log('MASK: ', backgrounds);
+      if (revealImg) {
+        revealImg.style.backgroundImage = `url(${backgrounds[0]}`;
+      }
+    }
+  };
   const backgroundSetter = () => {
-    const revealImg = document.querySelector('.home__mask');
-    console.log(backgroundPos);
-    if (revealImg && backgroundPos < Backgrounds.length) {
-      revealImg.style.backgroundImage = `url(${Backgrounds[backgroundPos]}`;
+    const revealImg = document.querySelector(mask);
+    if (revealImg && backgrounds.length > 1 && backgroundPos < backgrounds.length) {
+      revealImg.style.backgroundImage = `url(${backgrounds[backgroundPos]}`;
       backgroundPos += 1;
     } else {
       backgroundPos = 0;
@@ -27,12 +30,13 @@ export const useRevealMask = () => {
     };
   };
   const timerBackground = () => {
+    checkBackgrounds();
     backgroundSetter();
     background();
   };
   useEffect(() => {
-    const container = document.querySelector('.home');
-    if (location.pathname !== '/' && container) {
+    const container = document.querySelector('.main');
+    if (container) {
       container.removeEventListener('mousemove', () => {});
       container.removeEventListener('mouseenter', () => {});
       container.removeEventListener('mouseleave', () => {});
@@ -40,8 +44,8 @@ export const useRevealMask = () => {
     clearInterval(background().interval);
   }, [location.pathname]);
   const onMouseMove = () => {
-    const container = document.querySelector('.home');
-    const revealImg = document.querySelector('.home__mask');
+    const container = document.querySelector('.main');
+    const revealImg = document.querySelector('.control__mask');
     let isHovering = false;
     if (container) {
       container.addEventListener(

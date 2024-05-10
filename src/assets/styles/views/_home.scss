@@ -34,38 +34,6 @@
   background-color: inherit;
   overflow: hidden;
 
-  &__background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 4;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../../img/Pizarra.png');
-    background-size: 100vw 100vh;
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-  &__mask {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    background-size: 100vw 100vh;
-    transition: opacity 0.3s ease;
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
   &__main-screen {
   }
 
@@ -235,8 +203,8 @@
       position: relative;
       right: 20px;
       z-index: 6;
-      width: 17vw;
-      height: 12vh;
+      width: 15vw;
+      height: 11vh;
     }
   }
 }

@@ -24,12 +24,13 @@ const App = () => {
         <RenderProvider>
           <BrowserRouter>
             <AudioBoolean />
-
             <MaskHandler />
             <GoToBack />
             <Animation />
             <OrientationSetter />
             <AudioHandler />
+            <section className="control__background"></section>
+            <section className="control__mask"></section>
             <Routes>
               {ROUTES.map((route, index) => (
                 <Route path={route.path} element={route.element} key={index} />
