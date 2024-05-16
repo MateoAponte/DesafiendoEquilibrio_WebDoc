@@ -9,8 +9,8 @@ export const ATHLETE = {
 };
 export const ATHLETHES_VIDEO = {
   [ATHLETE.BASKET]: 'https://www.youtube.com/embed/A9hgn-8TB3s?si=iAdVLG-tM2DBLKtS',
-  [ATHLETE.SWIM]: 'https://www.youtube.com/embed/Moe1eazwuX4?si=QqH3nr-Slt-pal4X',
-  [ATHLETE.SKATE]: 'https://www.youtube.com/embed/IS4MjdMzC2E?si=tX3YMKm7AiFt-DJu',
+  [ATHLETE.SWIM]: 'https://www.youtube.com/embed/IS4MjdMzC2E?si=tX3YMKm7AiFt-DJu',
+  [ATHLETE.SKATE]: 'https://www.youtube.com/embed/Moe1eazwuX4?si=QqH3nr-Slt-pal4X',
 };
 export const ATHLETHES_SOUND = {
   [ATHLETE.BASKET]:
