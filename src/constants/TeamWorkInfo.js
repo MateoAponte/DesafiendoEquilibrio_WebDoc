@@ -29,12 +29,11 @@ eso merece toda la pena.
   },
   {
     name: 'Santiago Holguín',
-    text: `Atleta y senderista. Desarrollador Web de DESAFIANDO EL EQUILIBRIO, Teo nos cuenta: el proyecto
-me pareció una idea interesante, trabajar en ideas innovadores, salidas del foco son partes de los proyectos a los que
-me gusta pertenecer. Me gusta la idea de poderle dar visión a los deportistas, expresar por todo lo que pasan y poder
-dar la oportunidad de dar una pantalla a estos deportistas más estando en un país como en el que estamos. Universo
-totalmente distinto, detrás de cada uno hay una meta, hay algo en el día a día nos ayuda a levantarnos, nos inspira y
-eso merece toda la pena.
+    text: `Ex jugador de baloncesto selección Bogotá. Productor musical de DESAFIANDO EL EQUILIBRIO,
+Santi nos cuenta: apoyé este proyecto porque creí en la idea de mi mejor amigo. Además, he sido parte de la
+comunidad deportiva y siempre he querido resaltar todos estos esfuerzos que hacemos y que no se logran ver. Este
+proyecto me retó, de la mano de la música, a hacer sentir esos momentos indescriptibles que vivimos en diferentes
+contextos todos los deportistas.
 `,
     image: SANTIAGO_IMAGE,
   },
